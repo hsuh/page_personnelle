@@ -1,0 +1,9 @@
+//Just to see everything on one page
+- if @profile
+  - @profile.attributes.each do |field, value|
+    .profile-section.box
+      %h4= field
+      %p.profile-value= value
+- else
+  %div.welcome
+    %p= 'hmm.. something went wrong'

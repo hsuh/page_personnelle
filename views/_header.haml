@@ -1,0 +1,29 @@
+- if !@profile
+  %div.welcome
+    %p= @p.about
+- else
+  %header#header
+    %h1= 'Hsu Hlaing'
+    .mugshot
+      %a{href: '#about'}
+    %hr
+    %nav#main-nav
+      %ul
+        - if @sum
+          %li.active
+            %a{href: '/#about'}= 'About'
+          %li
+            %a{href: '/#tracks'}= 'Tracks'
+          %li
+            %a{href: '/#logic'}= 'Logic'
+          %li.scrollTop
+            %a{href: '/#contact'}= 'Contact'
+        - else
+          %li.active
+            %a{href: '#about'}= 'About'
+          %li
+            %a{href: '#tracks'}= 'Tracks'
+          %li
+            %a{href: '#logic'}= 'Logic'
+          %li.scrollTop
+            %a{href: '#contact'}= 'Contact'

@@ -1,0 +1,32 @@
+- js_track   = @profile['js_track_completedness']
+- ruby_track = @profile['ruby_track_completedness']
+- web_track  = @profile['web_track_completedness']
+
+%section#tracks
+  %h4= 'Tracks'
+  %p= @profile['codecademy']
+
+  %p= 'I like to learn new technologies and I have dabbled with different programming languages either through reading interestring blog posts, coursera or codecademy'
+  %p= 'Following are a few tracks that I did on codecademy.'
+
+  %h6= 'Python Track'
+  .progress
+    .progress-bar{role: 'progressbar', :"aria-valuenow" => 75, :"aria-valuemin" => 0, :"aria-valuemax" => 100, style:'width:75%;'}
+      = "75%"
+
+  %h6= 'JS Track'
+  .progress
+    .progress-bar{role: 'progressbar', :"aria-valuenow" => js_track, :"aria-valuemin" => '0', :"aria-valuemax" => 100, style:"width:#{js_track}%;"}
+      = js_track + "%"
+
+  %h6= 'Ruby Track'
+  .progress
+    .progress-bar{role: 'progressbar', :"aria-valuenow" => ruby_track, :"aria-valuemin" => '0', :"aria-valuemax" => 100, style:"width:#{ruby_track}%;"}
+      = ruby_track + "%"
+
+  %h6= 'Web Track'
+  .progress
+    .progress-bar{role: 'progressbar', :"aria-valuenow" => web_track, :"aria-valuemin" => '0', :"aria-valuemax" => 100, style:"width:#{web_track}%;"}
+      = ruby_track + "%"
+
+%hr
